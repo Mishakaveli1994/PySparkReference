@@ -6,7 +6,6 @@ In this tutorial, I will explain the most used RDD actions with examples.
 
 from pyspark.sql import SparkSession
 from operator import add
-import psutil
 
 spark = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
 data = [("Z", 1), ("A", 20), ("B", 30), ("C", 40), ("B", 30), ("B", 60)]
@@ -238,4 +237,4 @@ print("takeOrdered : " + str(listRdd.takeOrdered(2)))
 '''takeSample'''
 # Return the subset of the dataset in an Array.
 # Note: Use this method only when the resulting array is small, as all the data is loaded into the driver’s memory.
-print("take : " + str(listRdd.takeSample()))
+print("take : " + str(listRdd.takeSample(False, 5, 2)))
