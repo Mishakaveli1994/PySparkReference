@@ -6,7 +6,7 @@ data = [("Java", "20000"), ("Python", "100000"), ("Scala", "3000")]
 
 spark = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
 
-# Create from SparkSession
+# Create from SparkSession_SparkContext
 dfFromData2 = spark.createDataFrame(data).toDF(*columns)
 
 # Create with createDataFrame with Row type

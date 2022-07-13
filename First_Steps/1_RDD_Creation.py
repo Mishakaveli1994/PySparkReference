@@ -1,7 +1,7 @@
-# Import SparkSession
+# Import SparkSession_SparkContext
 from pyspark.sql import SparkSession
 
-# Create SparkSession
+# Create SparkSession_SparkContext
 spark = SparkSession.builder \
     .master("local[1]") \
     .appName("SparkByExamples.com") \
